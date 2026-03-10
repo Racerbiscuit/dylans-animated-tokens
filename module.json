@@ -8,7 +8,7 @@
       "url": "https://github.com/Racerbiscuit"
     }
   ],
-  "version": "2.0.5",
+  "version": "0.0.1",
   "compatibility": {
     "minimum": "13"
   },
@@ -53,5 +53,5 @@
   "socket": true,
   "url": "https://github.com/Racerbiscuit/dylans-animated-tokens",
   "manifest": "https://github.com/Racerbiscuit/dylans-animated-tokens/releases/latest/download/module.json",
-  "download": "https://github.com/Racerbiscuit/dylans-animated-tokens/releases/download/v2.0.6/module.zip"
+  "download": "https://github.com/Racerbiscuit/dylans-animated-tokens/releases/download/v0.0.1/module.zip"
 }
