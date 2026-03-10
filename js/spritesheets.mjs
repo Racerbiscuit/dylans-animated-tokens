@@ -296,27 +296,25 @@ function sliceMemao(sheetKey, slicingInfo, frames) {
 
     slicingInfo.animations[direction].push(key);
     // handle the fact that this sheet doesn't have diagonals
-    if (direction === "down") {
-      slicingInfo.animations.downleft.push(key);
-      slicingInfo.animations.downright.push(key);
-    } else if (direction === "left") {
+    // hacked to force any bias toward left and right to face that direction
+    if (direction === "left") {
       slicingInfo.animations.upleft.push(key);
+      slicingInfo.animations.downleft.push(key);
     } else if (direction === "right") {
       slicingInfo.animations.upright.push(key);
+      slicingInfo.animations.downright.push(key);
     } else if (direction === "idledown") {
-      slicingInfo.animations.idledownleft.push(key);
-      slicingInfo.animations.idledownright.push(key);
-    } else if (direction === "idleleft") {
       slicingInfo.animations.idleupleft.push(key);
+      slicingInfo.animations.idledownleft.push(key);
     } else if (direction === "idleright") {
       slicingInfo.animations.idleupright.push(key);
-    } else if (direction === "rundown") {
-      slicingInfo.animations.rundownleft.push(key);
-      slicingInfo.animations.rundownright.push(key);
+      slicingInfo.animations.idledownright.push(key);
     } else if (direction === "runleft") {
       slicingInfo.animations.runupleft.push(key);
+      slicingInfo.animations.rundownleft.push(key);
     } else if (direction === "runright") {
       slicingInfo.animations.runupright.push(key);
+      slicingInfo.animations.rundownright.push(key);
     }
 
     slicingInfo.frames[key] = {
